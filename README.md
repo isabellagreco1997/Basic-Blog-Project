@@ -1,3 +1,4 @@
+![Example Image](./demo.png)
 
 
 # Basic Blog Project
