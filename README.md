@@ -1,74 +1,38 @@
-<<<<<<< HEAD
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+# Basic Blog Project
 
-In the project directory, you can run:
+This is a basic blog project with functionality to add, delete, and edit posts. It is built with React and includes a random post generator.
 
-### `npm start`
+## Usage
+Clone the repository
+Run npm install to install the dependencies
+Run npm start to start the development server
+Navigate to http://localhost:3000 in your browser
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## App Overview
+The App component is the main component of the application. It uses the useState hook to manage the state of the blog posts, the text and title of the current post being edited, the selected post index, the edited post object, and any error message.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Add Post
+When the Add Blog Post button is clicked, the addPost function is called, which checks that both the title and body of the post are not empty, sets an error message if they are, creates a new post object, adds it to the array of existing posts, and clears the title and text fields.
 
-### `npm test`
+### Delete Post
+When the Delete button is clicked for a given post, the deletePost function is called, which removes the post at the given index, resets the selected post index and edited post object, and updates the state.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Generate Random Post
+When the Generate Random Post button is clicked, the generatePost function is called, which uses a generateRandomPost function to create a random post title and body and sets them in the state.
 
-### `npm run build`
+### Edit Post
+When the Edit button is clicked for a given post, the editSelectedPost function is called, which sets the selected post index and edited post object.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Save Post Changes
+When the Save Changes button is clicked for a given post being edited, the updatePost function is called, which updates the post at the selected index in the array of existing posts with the new edited post object, resets the selected post index and edited post object, and updates the state.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### BlogPost Component
+The BlogPost component is a functional component that receives the post image, title, and body as props and renders them in a formatted manner.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Styling
+The App.css file contains the CSS styles used by the components in the application.
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-=======
-# Basic-Blog-Project
->>>>>>> aa6be21e9cdf2d83a9d7132783075c90c211f123
+## Attribution
+The project uses the Picsum Photos API to generate a random image for each post.
