@@ -1,38 +1,184 @@
+/* styles.css */
+
+/* App container */
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  margin: 0 auto;
+  max-width: 800px;
+  padding: 0 16px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+/* Page header */
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 16px;
+  text-align: center;
+}
+
+h1 {
+  font-size: 2rem;
+  margin: 0;
+}
+
+p {
+  font-size: 1rem;
+  margin: 0;
+}
+
+/* Input fields */
+input[type="text"] {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+  margin-bottom: 16px;
+  padding: 8px;
+  width: calc(50% - 4px); /* reduce width to 50% of parent container */
+}
+
+/* Add margin to top of input fields */
+input[type="text"]:first-child {
+  margin-top: 16px;
+}
+
+/* Button styles */
+button {
+  background-color: #333;
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-left: 8px;
+  padding: 8px 16px;
+}
+
+button:hover {
+  background-color: #444;
+}
+
+/* Edit button styles */
+.edit-button {
+  background-color: #eee;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  color: #333;
+  cursor: pointer;
+  font-size: 1rem;
+  margin: 0 8px;
+  padding: 8px 16px;
+  transition: all 0.2s ease-in-out;
+}
+
+.edit-button:hover {
+  background-color: #ccc;
+  border-color: #aaa;
+  color: #fff;
+}
+
+/* Blog post styles */
+.blog-post {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 16px;
+  padding: 16px;
+}
+
+.blog-post h2 {
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.blog-post p {
+  font-size: 1rem;
+  margin: 16px 0 0;
+}
+
+/* Error message styles */
+.error {
+  color: #f00;
+  font-size: 1rem;
+  margin: 8px 0 0;
+}
+
+
+.edit-text-wrapper {
+  border: 1px solid #ccc;
+  padding: 16px;
+  margin-top: 16px;
+}
+
+.edit-text-wrapper input[type="text"],
+.edit-text-wrapper textarea {
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  margin-bottom: 8px;
+  padding: 8px;
+  width: 100%;
+}
+
+.edit-text-wrapper textarea {
+  height: 200px;
+}
+
+.edit-text-wrapper button {
+  background-color: #333;
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-top: 8px;
+  padding: 8px 16px;
+}
+
+.edit-text-wrapper button:hover {
+  background-color: #444;
+}
+
+.edit-text-wrapper .button-wrapper {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.edit-text-wrapper.editing {
+  border-radius: 4px;
+}
+
+.button-group {
+  display: flex;
+  justify-content: center;
+  margin: 1rem 0;
+}
+
+.add-post-button, .generate-post-button {
+  background-color: #008CBA;
   color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  margin: 0.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: all 0.2s ease-in-out;
 }
 
-.App-link {
-  color: #61dafb;
+.add-post-button:hover, .generate-post-button:hover {
+  background-color: #004e6e;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.add-post-button:focus, .generate-post-button:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px #fff, 0 0 0 4px #008CBA;
+}
+
+.error-message {
+  background-color: #ffe8e8;
+  color: #d8000c;
+  padding: 0.5rem;
+  margin: 1rem 0;
+  border-radius: 5px;
 }
